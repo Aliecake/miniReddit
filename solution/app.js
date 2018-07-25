@@ -1,14 +1,14 @@
 // Notice that in the Vue instance, the "post" data property has been replaced with an array of objects called "posts",
-// provided below. The index.html file now includes a form that the user can fill out to add a new post to the list. 
+// provided below. The index.html file now includes two input elements so the user to add news post to the list. 
 
-// 1. Modify the code so that it works with a list of posts instead of a single post 
-//  a. Use v-for on the .post div to iterate through each post in the post array. Use dot notation to make
+// 1. Modify the code so it works with a list of posts instead of a single post 
+//  a. Use v-for on the .post div to iterate through each post in the post array. Use dot notation in the template to make
 //     sure all data displays properly. 
-//  b. Modify the "increment" and "decrement" methods so that they work in a loop.  Hint: the method 
+//  b. Modify the "increment" and "decrement" methods so that they work in a loop.  (Hint: the method 
 //     needs to know which specific post to increment or decrement)
 
 // 2. Add new posts 
-//   a. In the Vue instance, create two data properties to save the info from the form. In the Vue 
+//   a. In the Vue instance, create two new data properties to save the info from the form. In the Vue 
 //      template, use v-model on each form input field to capture data entered into the fields.
 //   b. Create a new method called createNew. Inside createNew(), use the properties you've just created 
 //      to make new post object and push it into the posts array. 
