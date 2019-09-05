@@ -12,20 +12,20 @@
   <div id="app" class="container">
     <h1>Skimmit News</h1>
     <div class="form">
-      Title: <input type="text">
-      Summary: <input type="text">
-      <button>Create New</button>
+      Title: <input type="text" v-model="title">
+      Summary: <input v-on:keypress.enter="newPost()" type="text" v-model="summary">
+      <button v-on:click="newPost()">Create New</button>
     </div>
-    <div class="post">
+    <div class="post" v-for="(post, index) in sortedPosts">
       <div id="voteCounter">
-        <span v-on:click="increment">+</span>
-        <span v-on:click="decrement">-</span>
-        <p class="votes">Votes: {{ votes }}</p>
+        <span v-on:click="increment(index)">+</span>
+        <span v-on:click="decrement(index)">-</span>
+        <p class="votes">Votes: {{ post.votes }}</p>
       </div>
-      <div><img v-bind:src="thumbnail" alt="Placeholder image."></div>
+      <div><img v-bind:src="post.thumbnail" alt="Placeholder image."></div>
       <div class="post-info">
-        <h3>{{ title }}</h3>
-        <p>{{ summary }}</p>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.summary }}</p>
       </div>
     </div>
   </div>
