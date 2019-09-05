@@ -45,7 +45,7 @@ new Vue({
       this.summary = '';
     }
   },
-  computed: {
+  computed: { 
     sortedPosts: function() {
       return this.posts.sort((currentPost,nextPost) => {
         return nextPost.votes - currentPost.votes;
